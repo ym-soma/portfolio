@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* reset */
+body,h1,h2,h3,h4,ul,li,p,figure,figcaption{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img{
+  vertical-align: bottom;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* 設定 */
+.ds_f{
+  display: flex;
+}
+
+/* 全体 */
+body{
+  background-image: url(../images/left_bg.png);
+  background-position: left 10%;
+  background-repeat: repeat-y;
+}
+
+
+
+/* main_title */
+h1{
+  position: fixed;
+  top: 0;
+  right: -5px;
+}
+
+
+/* ナビ */
+
+
+
+
+/* 自己紹介 */
+
+
+
+/* 制作 */
+
+figure img{
+  width: 29.375rem;
+  height: 24.375rem;
+  object-fit: cover;
+  object-position: top;
+
+}
+
+
+
+/* スキル */
+
+
