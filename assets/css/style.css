@@ -1,62 +1,197 @@
 @charset "UTF-8";
 
 /* reset */
-body,h1,h2,h3,h4,ul,li,p,figure,figcaption{
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-img{
+
+img {
   vertical-align: bottom;
 }
-a{
+
+a {
   text-decoration: none;
   color: #000;
 }
 
-/* 設定 */
-.ds_f{
-  display: flex;
+/* 全体 */
+.wrapper {
+  width: 80vw;
+  margin-left: 18vw;
 }
 
+/* 横並び */
+.ds_f {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* 縦書き */
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+
+
 /* 全体 */
-body{
+body {
   background-image: url(../images/left_bg.png);
   background-position: left 10%;
   background-repeat: repeat-y;
+  position: fixed;
+}
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 5vh;
 }
 
 
-
 /* main_title */
-h1{
-  position: fixed;
-  top: 0;
-  right: -5px;
+body {
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: -7px;
+  /* right: -21px; */
+
+  width: 67vw;
+  height: 33vh;
+  font-size: 33vh;
+  line-height: 27vh;
+  text-align: end;
+
+  font-family: "Bio Sans", sans-serif;
+  color: #ff5a00;
+  text-shadow: -15px 0 0 #000;
+
 }
 
 
 /* ナビ */
-
-
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 1000px;
+  margin-top: 100px;
+}
+nav ul {
+  flex-wrap: nowrap;
+}
+nav ul li {
+  width: 100px;
+  height: 140px;
+  margin: 5px;
+}
+nav ul li:first-child{
+  height: 150px;
+}
+nav ul li a {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 50px;
+  margin: 5% auto;
+  padding: 40px 3px;
+  transition: .5s;
+}
+nav ul li a:hover{
+  background-color: #ff5a00;
+  color: #fff;
+  transition: .5s;
+}
 
 
 /* 自己紹介 */
+#profile{
+  padding-top: 40vh;
+  margin-bottom: 20vh;
 
+}
+.introduction{
+  width: 100%;
+  align-items: flex-end;
+}
 
+/* 自己紹介＿自画像 */
+.introduction .faceimg {
+  width: 420px;
+}
+
+.introduction .faceimg img {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 45px;
+}
+
+/* 自己紹介＿テキスト */
+.introduction .prof_text {
+  width: 40vw;
+}
+.introduction .prof_text p:nth-of-type(1){
+  font-weight: bold;
+}
+.introduction .prof_text p:nth-of-type(2){
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
 
 /* 制作 */
+#work{
+  margin-bottom: 20vh;
+}
+#work ul li {
+  margin: 2vw 2vw;
+}
 
-figure img{
+#work figure img {
   width: 29.375rem;
   height: 24.375rem;
   object-fit: cover;
   object-position: top;
-
+}
+#work figcaption,#work p{
+  text-align: left;
 }
 
 
-
 /* スキル */
-
-
+#skill{
+  margin-bottom: 20vh;
+}
+#skill ul li {
+  width: 240px;
+  margin: 3vh 3vw;
+}
+#skill ul li img {
+  height: 190px;
+  width: 190px;
+  text-align: center;
+}
+#skill ul li h4,
+#skill ul li .icon{
+  text-align: center;
+}
