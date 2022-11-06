@@ -382,8 +382,13 @@ main h1 {
 
   /* 全体 */
   h2 {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  h3 {
+    margin-bottom: 2vh;
+    line-height: 1rem;
+    font-weight: 100;
   }
 
   /* タイトル */
@@ -391,7 +396,7 @@ main h1 {
     font-size: 21vw;
     text-shadow: -8px 0 0 #000;
     line-height: 14vh;
-    top: -16px;
+    top: 0;
     right: unset;
     left: 50px;
   }
@@ -403,7 +408,7 @@ main h1 {
 
   /* ハンバーガーボタン */
   .btn {
-    top: 60px;
+    top: 85px;
     left: unset;
     right: 15px;
   }
@@ -420,9 +425,7 @@ main h1 {
     margin-bottom: 14vh;
   }
 
-  h3 {
-    margin-bottom: 2vh;
-  }
+
 
   /* 自己紹介_自画像 */
   .introduction .faceimg {
@@ -431,8 +434,8 @@ main h1 {
   }
 
   .introduction .faceimg img {
-    width: 33vw;
-    height: 28vh;
+    width: 130px;
+    height: 190px;
   }
 
   /* 自己紹介_文章 */
@@ -443,8 +446,8 @@ main h1 {
   }
 
   .introduction .prof_text p:nth-child(2) {
-    font-size: 2.6rem;
-    line-height: 2.6rem;
+    font-size: 2rem;
+    line-height: 2rem;
     text-align: center;
   }
 
@@ -479,14 +482,17 @@ main h1 {
   }
 
   /* スキル */
-  #skill p{
+  #skill p {
     font-size: .8rem;
   }
+
   #skill ul li {
-    margin-bottom: 6vh;
-}
-#skill ul li:nth-child(3) img {
-  height: 150px;
-  object-fit: cover;
-}
+    width: 85%;
+    margin-bottom: 5vh;
+  }
+
+  #skill ul li:nth-child(3) img {
+    height: 150px;
+    object-fit: cover;
+  }
 }
