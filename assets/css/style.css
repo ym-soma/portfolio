@@ -80,11 +80,8 @@ main h1 {
   top: -7px;
   right: 0;
 
-  width: 67vw;
-  height: 33vh;
   font-size: 33vh;
   line-height: 27vh;
-  text-align: end;
 
   font-family: "Bio Sans", sans-serif;
   color: #ff5a00;
@@ -385,6 +382,7 @@ main h1 {
     font-size: 1.8rem;
     line-height: 1.8rem;
   }
+
   h3 {
     margin-bottom: 2vh;
     line-height: 1rem;
@@ -395,10 +393,10 @@ main h1 {
   main h1 {
     font-size: 15vw;
     text-shadow: -8px 0 0 #000;
-    line-height: 8vh;
+    line-height: normal;
     top: 1vh;
     right: unset;
-    left: 5vw;
+    left: 15vw;
   }
 
   /* ナビ */
@@ -494,5 +492,9 @@ main h1 {
   #skill ul li:nth-child(3) img {
     height: 150px;
     object-fit: cover;
+  }
+
+  #skill ul li:nth-child(4) p:last-child br:first-child {
+    display: none;
   }
 }
