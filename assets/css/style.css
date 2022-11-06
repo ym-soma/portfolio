@@ -311,10 +311,12 @@ main h1 {
   font-weight: bold;
   margin-bottom: 3vh;
 }
+
 .introduction .prof_text p:nth-child(3),
-.introduction .prof_text p:nth-child(4){
+.introduction .prof_text p:nth-child(4) {
   margin-bottom: 10px;
-}  
+}
+
 /* 制作 */
 #work {
   margin-bottom: 30vh;
@@ -324,6 +326,9 @@ main h1 {
   margin: 2vw 2vw;
 }
 
+#work figure {
+  background-color: #0000002b;
+}
 #work figure img {
   width: 27.375rem;
   height: 21.375rem;
@@ -362,7 +367,7 @@ main h1 {
 
 
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:780px) {
 
   .wrapper {
     width: auto;
@@ -375,17 +380,14 @@ main h1 {
 
   /* タイトル */
   main h1 {
-    font-size: 17vw;
+    font-size: 19vw;
     text-shadow: -8px 0 0 #000;
     width: auto;
     height: auto;
-    line-height: 13vh;
+    line-height: 14vh;
   }
 
-  /* プロフィール */
-  #profile {
-    padding-top: 20vh;
-  }
+
 
   /* ナビ */
   .always {
@@ -398,18 +400,31 @@ main h1 {
     left: 55px;
   }
 
-  /* 自画像 */
+  /* 自己紹介 */
+  #profile {
+    padding-top: 25vh;
+    margin-bottom: 20vh;
+  }
+  h3 {
+    margin-bottom: 4vh;
+  }
+
+  /* 自己紹介_自画像 */
   .introduction .faceimg {
     margin-bottom: 5%;
   }
 
-  /* 自己紹介 */
+  /* 自己紹介_文章 */
   .introduction .prof_text {
-    width: 73vw;
+    width: 72vw;
     line-height: 1.5rem;
   }
 
-/* 制作 */
+  /* 制作 */
+  #work {
+    margin-bottom: 20vh;
+  }
+
   #work ul li {
     margin-bottom: 6vw;
   }
