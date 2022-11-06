@@ -406,9 +406,9 @@ main h1 {
 
   /* ハンバーガーボタン */
   .btn {
-    top: 15px;
+    top: 3vh;
     left: unset;
-    right: 15px;
+    right: 5vw;
   }
 
   .nav_bg {
