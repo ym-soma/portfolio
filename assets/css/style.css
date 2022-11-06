@@ -393,12 +393,12 @@ main h1 {
 
   /* タイトル */
   main h1 {
-    font-size: 21vw;
+    font-size: 15vw;
     text-shadow: -8px 0 0 #000;
-    line-height: 14vh;
+    line-height: 8vh;
     top: 0;
     right: unset;
-    left: 50px;
+    left: 10px;
   }
 
   /* ナビ */
@@ -408,7 +408,7 @@ main h1 {
 
   /* ハンバーガーボタン */
   .btn {
-    top: 85px;
+    top: 15px;
     left: unset;
     right: 15px;
   }
