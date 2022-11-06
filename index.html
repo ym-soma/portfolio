@@ -13,14 +13,39 @@
 
 <body>
 
+  <!-- ハンバーガーボタン -->
+  <div class="btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <!-- ナビゲーション -->
-  <nav>
+  <nav class="always">
     <ul class="vertical ds_f">
       <li><a href="#profile">profile</a></li>
       <li><a href="#work">work</a></li>
       <li><a href="#skill">skill</a></li>
     </ul>
   </nav>
+  <nav class="humberger">
+    <ul>
+      <li><a href="#profile">profile</a></li>
+      <li><a href="#work">work</a>
+        <ul>
+          <li><a href="">御宿 やえざき</a></li>
+          <li><a href="">patisserie Fruit</a></li>
+          <li><a href="">HAIR SALON_MORE</a></li>
+          <li><a href="">portfolio（現サイト）</a></li>
+        </ul>
+      </li>
+      <li><a href="#skill">skill</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="nav_bg"></div>
+
 
   <main class="wrapper">
 
@@ -39,14 +64,24 @@
       <!-- 自己紹介内容 -->
       <div class="introduction ds_f">
         <!-- 自画像 -->
-        <p class="faceimg"><img src="assets/images/faceimg.jpg" alt="自画像"></p>
+        <p class="faceimg"><img src="assets/images/me.png" alt="自画像"></p>
 
         <!-- 自己紹介・文章部分 -->
         <div class="prof_text">
           <p>そうま ゆみ</p>
           <p>相馬 優美</p>
           <p>
-            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            1991年、秋田県生まれ。<br>
+            高校を卒業し地元の工場に就職するも、昔からなりたかった美容師の夢があきらめきれず専門学校に入学。<br>
+          </p>
+          <p>
+            無事美容師になれ、自分の技術でお客様に喜んでもらうことにやりがいを感じていたが、一人のお客様に時間をかけられないことや、一発勝負の仕事内容が自分の性格に合っていないことに気づき、美容室を退社。<br>
+          </p>
+          <p>
+            アシスタント業務がとても楽しかったので、ECサイトの営業アシスタントとして転職。<br>
+            初めてのIT業界だったが、常に良いものを求めてアップデートしていく業界にとても魅力を感じる。<br>
+            退職後、技術を学びたいと思い職業訓練校にてHTML5・CSS3・jQueryを勉強。日々勉強に勤しむ。<br>
+            今後はPHPとWordpressの勉強もしていく予定。
           </p>
         </div>
       </div>
@@ -96,7 +131,7 @@
           <p>
             わかりやすく簡潔な記述、タグの意味を考えての記述を心がけております。<br>
             レスポンシブの対応も可能です。<br>
-            エディタはVScodeを使っております。
+            エディタはVisual Studio Codeを使っております。
           </p>
         </li>
         <li>

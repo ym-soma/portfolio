@@ -25,17 +25,25 @@ a {
   color: #000;
 }
 
-/* 全体 */
+/* ラップ */
 .wrapper {
   width: 80vw;
   margin-left: 18vw;
 }
 
+/* リンク */
+#work,
+#skill {
+  margin-top: -30px;
+  padding-top: 30px;
+}
+
+
 /* 横並び */
 .ds_f {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 /* 縦書き */
@@ -51,27 +59,26 @@ body {
   background-position: left 10%;
   background-repeat: repeat-y;
   position: fixed;
+  position: relative;
 }
+
 h2 {
   text-align: center;
   font-size: 3rem;
   line-height: 3rem;
 }
+
 h3 {
   text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 
 
 /* main_title */
-body {
-  position: relative;
-}
-
-h1 {
+main h1 {
   position: absolute;
   top: -7px;
-  /* right: -21px; */
+  right: 0;
 
   width: 67vw;
   height: 33vh;
@@ -82,116 +89,328 @@ h1 {
   font-family: "Bio Sans", sans-serif;
   color: #ff5a00;
   text-shadow: -15px 0 0 #000;
-
+  z-index: -1;
 }
+
+/* ハンバーガーボタン */
+.btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: fixed;
+  top: 45px;
+  left: 78px;
+  z-index: 99999;
+}
+
+.btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transition: all .5s;
+}
+
+.btn span:nth-child(1) {
+  top: 10px;
+}
+
+.btn span:nth-child(2) {
+  top: 19px;
+}
+
+.btn span:nth-child(3) {
+  bottom: 10px;
+}
+
+/* ハンバーガーボタンクリック後 */
+.active span {
+  background-color: #fff;
+}
+
+.active span:nth-child(1) {
+  transform: rotate(138deg);
+  top: 20px;
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(226deg);
+  bottom: 18px;
+}
+
 
 
 /* ナビ */
-nav{
+.always {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 50px;
   height: 1000px;
   margin-top: 100px;
 }
-nav ul {
+
+.always ul {
   flex-wrap: nowrap;
 }
-nav ul li {
+
+.always ul li {
   width: 100px;
   height: 140px;
   margin: 5px;
 }
-nav ul li:first-child{
+
+.always ul li:first-child {
   height: 150px;
 }
-nav ul li a {
+
+.always ul li a {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  border: 1px solid #999;
+  color: #333;
   border-radius: 50px;
   margin: 5% auto;
   padding: 40px 3px;
   transition: .5s;
 }
-nav ul li a:hover{
-  background-color: #ff5a00;
+
+.always ul li a:hover {
+  background-color: #ff5900;
   color: #fff;
   transition: .5s;
 }
 
+/* ハンバーガーボタンクリック後 */
+/* ナビ */
+.humberger {
+  display: none;
+}
 
-/* 自己紹介 */
-#profile{
-  padding-top: 40vh;
-  margin-bottom: 20vh;
+.open {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  top: 190px;
+  width: 100%;
+  height: 100vh;
+}
+
+.open li {
+  width: 300px;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.open ul li:nth-child(2) {
+  height: auto;
+}
+
+.open ul li:nth-child(2) ul {
+  margin-top: 15px;
+}
+
+.open ul li:nth-child(2) ul li {
+  height: 30px;
+  list-style: inside;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.open li a {
+  color: #fff;
+  writing-mode: lr-tb;
+  border: none;
+  padding: 10px 3px;
+  transition: .5s;
 
 }
-.introduction{
-  width: 100%;
-  align-items: flex-end;
+
+.open li a:hover {
+  background-color: transparent;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .5s;
+}
+
+.open ul {
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* 背景 */
+.nav_bg {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff5900;
+  transform: scale(0);
+  /* 始まりは0位置(見えない) */
+  left: -50px;
+  top: -50px;
+  transition: all .5s;
+}
+
+.huberger_bg {
+  transform: scale(50);
+  transition: all .5s;
+}
+
+
+/* 自己紹介 */
+#profile {
+  padding-top: 40vh;
+  margin-bottom: 10vh;
 }
 
 /* 自己紹介＿自画像 */
 .introduction .faceimg {
-  width: 420px;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 30px 80px;
 }
 
 .introduction .faceimg img {
-  width: 350px;
-  height: 350px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  padding: 45px;
+  width: 255px;
+  height: 360px;
 }
 
 /* 自己紹介＿テキスト */
 .introduction .prof_text {
   width: 40vw;
+  margin: 0 3vw;
 }
-.introduction .prof_text p:nth-of-type(1){
+
+.introduction .prof_text p:nth-child(1) {
   font-weight: bold;
+  font-size: 1.3rem;
 }
-.introduction .prof_text p:nth-of-type(2){
+
+.introduction .prof_text p:nth-child(2) {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: bold;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
-
+.introduction .prof_text p:nth-child(3),
+.introduction .prof_text p:nth-child(4){
+  margin-bottom: 10px;
+}  
 /* 制作 */
-#work{
+#work {
   margin-bottom: 20vh;
 }
+
 #work ul li {
   margin: 2vw 2vw;
 }
 
 #work figure img {
-  width: 29.375rem;
-  height: 24.375rem;
+  width: 27.375rem;
+  height: 21.375rem;
   object-fit: cover;
   object-position: top;
+  border: 1px solid #999;
 }
-#work figcaption,#work p{
+
+#work figcaption,
+#work p {
   text-align: left;
 }
 
 
 /* スキル */
-#skill{
+#skill {
   margin-bottom: 20vh;
 }
+
 #skill ul li {
   width: 240px;
   margin: 3vh 3vw;
 }
+
 #skill ul li img {
   height: 190px;
   width: 190px;
   text-align: center;
 }
+
 #skill ul li h4,
-#skill ul li .icon{
+#skill ul li .icon {
   text-align: center;
+}
+
+
+
+
+@media screen and (max-width:640px) {
+
+  .wrapper {
+    width: auto;
+    margin-left: 10vw;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /* タイトル */
+  main h1 {
+    font-size: 17vw;
+    text-shadow: -8px 0 0 #000;
+    width: auto;
+    height: auto;
+    line-height: 13vh;
+  }
+
+  /* プロフィール */
+  #profile {
+    padding-top: 20vh;
+  }
+
+  /* ナビ */
+  .always {
+    display: none;
+  }
+
+  /* ハンバーガーボタン */
+  .btn {
+    top: 25px;
+    left: 68px;
+  }
+
+  /* 自画像 */
+  .introduction .faceimg {
+    margin-bottom: 5%;
+  }
+
+  /* 自己紹介 */
+  .introduction .prof_text {
+    width: 73vw;
+    line-height: 1.5rem;
+  }
+
+/* 制作 */
+  #work ul li {
+    margin-bottom: 6vw;
+  }
 }
