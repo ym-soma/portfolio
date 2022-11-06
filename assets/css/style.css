@@ -396,9 +396,9 @@ main h1 {
     font-size: 15vw;
     text-shadow: -8px 0 0 #000;
     line-height: 8vh;
-    top: 0;
+    top: 1vh;
     right: unset;
-    left: 10px;
+    left: 5vw;
   }
 
   /* ナビ */
