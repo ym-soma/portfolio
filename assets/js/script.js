@@ -33,3 +33,24 @@ $(function () {
     $(".nav_bg").removeClass("huberger_bg");
   });
 });
+
+$(function() {
+  // 変数にクラスを入れる
+  var btn = $('.totop');
+  
+  //スクロールしてページトップから100に達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 100) {
+      btn.addClass('arrival');
+    }else{
+      btn.removeClass('arrival');
+    }
+  });
+
+  //スクロールしてトップへ戻る
+  btn.on('click',function () {
+    $('body,html').animate({
+      scrollTop: 0
+    });
+  });
+});

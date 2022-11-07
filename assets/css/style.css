@@ -32,6 +32,7 @@ a {
 }
 
 /* リンク */
+#profile,
 #work,
 #skill {
   margin-top: -30px;
@@ -58,8 +59,8 @@ body {
   background-image: url(../images/left_bg.png);
   background-position: left 10%;
   background-repeat: repeat-y;
-  position: fixed;
   position: relative;
+  z-index: -1;
 }
 
 h2 {
@@ -76,18 +77,87 @@ h3 {
 
 /* main_title */
 main h1 {
-  position: absolute;
-  top: -7px;
-  right: 0;
-
-  font-size: 33vh;
-  line-height: 27vh;
+  text-align: center;
+  margin: 38vh auto 65vh;
+  font-size: 20vh;
+  line-height: 17vh;
 
   font-family: "Bio Sans", sans-serif;
   color: #ff5a00;
   text-shadow: -15px 0 0 #000;
   z-index: -1;
 }
+
+/* スクロールバー */
+main {
+  position: relative;
+  z-index: -1;
+}
+
+main .scroll {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  top: 0;
+  right: 50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 2s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove {
+  0% {
+    top: 9.8%;
+  }
+
+  50% {
+    top: 10%;
+  }
+
+  100% {
+    top: 9.8%;
+  }
+}
+
+/*Scrollテキスト*/
+main .scroll span {
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  /*テキストの形状*/
+  color: #00473e;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  padding: 10px;
+  padding-left: 0;
+}
+
+/* 矢印の描写 */
+main .scroll:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 15px;
+  background: #00473e;
+  transform: skewX(-31deg);
+}
+
+main .scroll:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 7px;
+  right: 0;
+  /*矢印の形状*/
+  width: 1px;
+  height: 40px;
+  background: #00473e;
+}
+
 
 /* ハンバーガーボタン */
 .btn {
@@ -176,7 +246,7 @@ main h1 {
 }
 
 .always ul li a:hover {
-  background-color: #ff5900;
+  background-color: #214098;
   color: #fff;
   transition: .5s;
 }
@@ -257,7 +327,7 @@ main h1 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ff5900;
+  background-color: #214098;
   transform: scale(0);
   /* 始まりは0位置(見えない) */
   left: -50px;
@@ -273,12 +343,11 @@ main h1 {
 
 /* 自己紹介 */
 #profile {
-  padding-top: 40vh;
   margin-bottom: 30vh;
 }
 
 /* 自己紹介＿自画像 */
-.introduction .faceimg {
+#profile .introduction .faceimg {
   height: 100%;
   border: 1px solid;
   border-radius: 50%;
@@ -286,31 +355,31 @@ main h1 {
   margin: auto 0;
 }
 
-.introduction .faceimg img {
+#profile .introduction .faceimg img {
   width: 210px;
   height: 300px;
 }
 
 /* 自己紹介＿テキスト */
-.introduction .prof_text {
+#profile .introduction .prof_text {
   width: 40vw;
   margin: 0 3vw;
 }
 
-.introduction .prof_text p:nth-child(1) {
+#profile .introduction .prof_text p:nth-child(1) {
   font-weight: bold;
   font-size: 1.3rem;
 }
 
-.introduction .prof_text p:nth-child(2) {
-  font-size: 3rem;
-  line-height: 3rem;
+#profile .introduction .prof_text p:nth-child(2) {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
   font-weight: bold;
   margin-bottom: 3vh;
 }
 
-.introduction .prof_text p:nth-child(3),
-.introduction .prof_text p:nth-child(4) {
+#profile .introduction .prof_text p:nth-child(3),
+#profile .introduction .prof_text p:nth-child(4) {
   margin-bottom: 10px;
 }
 
@@ -363,6 +432,77 @@ main h1 {
 }
 
 
+/* topへ戻るボタン */
+main .totop{
+  opacity: 0;
+  transition: 1s;
+}
+
+main .arrival{
+  /*描画位置※位置は適宜調整してください*/
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: totopmove 2s ease-in-out infinite;
+  opacity: 1;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes totopmove {
+  0% {
+    bottom: 9.8%;
+  }
+
+  50% {
+    bottom: 10%;
+  }
+
+  100% {
+    bottom: 9.8%;
+  }
+}
+
+/*Scrollテキスト*/
+main .arrival span {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  /*テキストの形状*/
+  color: #00473e;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* 矢印の描写 */
+main .arrival:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 25px;
+  right: -5px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 15px;
+  background: #00473e;
+  transform: skewX(35deg);
+}
+
+main .arrival:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*矢印の形状*/
+  width: 1px;
+  height: 40px;
+  background: #00473e;
+}
 
 
 @media screen and (max-width:780px) {
@@ -417,6 +557,23 @@ main h1 {
     top: -50px;
   }
 
+
+  /* スクロールダウン */
+  main .scroll:before {
+    top: -10px;
+    right: -5px;
+  }
+
+  main .scroll span {
+    left: -20px;
+    top: -40px;
+  }
+
+  main .scroll:after {
+    top: -35px;
+  }
+
+
   /* 自己紹介 */
   #profile {
     padding-top: 20vh;
@@ -426,30 +583,30 @@ main h1 {
 
 
   /* 自己紹介_自画像 */
-  .introduction .faceimg {
+  #profile .introduction .faceimg {
     margin-bottom: 5%;
     padding: 20px 60px;
   }
 
-  .introduction .faceimg img {
+  #profile .introduction .faceimg img {
     width: 130px;
     height: 190px;
   }
 
   /* 自己紹介_文章 */
-  .introduction .prof_text p:nth-child(1) {
+  #profile .introduction .prof_text p:nth-child(1) {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.2rem;
   }
 
-  .introduction .prof_text p:nth-child(2) {
+  #profile .introduction .prof_text p:nth-child(2) {
     font-size: 2rem;
     line-height: 2rem;
     text-align: center;
   }
 
-  .introduction .prof_text {
+  #profile .introduction .prof_text {
     width: 72vw;
     line-height: 1rem;
     font-size: .9rem;
