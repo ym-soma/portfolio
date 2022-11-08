@@ -61,6 +61,8 @@ body {
   background-repeat: repeat-y;
   position: relative;
   z-index: -1;
+  font-family: "メイリオ", "Meiryo","游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+
 }
 
 h2 {
@@ -122,7 +124,7 @@ main .scroll {
 main .scroll span {
   position: absolute;
   left: -20px;
-  top: 10px;
+  top: -30px;
   /*テキストの形状*/
   color: #00473e;
   font-size: 0.7rem;
@@ -137,7 +139,7 @@ main .scroll:before {
   content: "";
   /*描画位置*/
   position: absolute;
-  top: 30px;
+  top: 0px;
   right: -6px;
   /*矢印の形状*/
   width: 1px;
@@ -150,7 +152,7 @@ main .scroll:after {
   content: "";
   /*描画位置*/
   position: absolute;
-  top: 7px;
+  top: -23px;
   right: 0;
   /*矢印の形状*/
   width: 1px;
@@ -433,12 +435,12 @@ main .scroll:after {
 
 
 /* topへ戻るボタン */
-main .totop{
+main .totop {
   opacity: 0;
   transition: 1s;
 }
 
-main .arrival{
+main .arrival {
   /*描画位置※位置は適宜調整してください*/
   position: fixed;
   bottom: 0;
@@ -560,17 +562,17 @@ main .arrival:after {
 
   /* スクロールダウン */
   main .scroll:before {
-    top: -10px;
+    top: -46px;
     right: -5px;
   }
 
   main .scroll span {
     left: -20px;
-    top: -40px;
+    top: -75px;
   }
 
   main .scroll:after {
-    top: -35px;
+    top: -70px;
   }
 
 
