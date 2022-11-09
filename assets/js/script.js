@@ -37,13 +37,23 @@ $(function () {
 $(function() {
   // 変数にクラスを入れる
   var btn = $('.totop');
-  
-  //スクロールしてページトップから100に達したらボタンを表示
+  var bread = $('.crumb');
+
+  //スクロールしてページトップから500に達したらボタンを表示
   $(window).on('load scroll', function(){
-    if($(this).scrollTop() > 100) {
+    if($(this).scrollTop() > 500) {
       btn.addClass('arrival');
     }else{
       btn.removeClass('arrival');
+    }
+  });
+  
+  //スクロールしてページトップから100に達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 200) {
+      bread.addClass('none');
+    }else{
+      bread.removeClass('none');
     }
   });
 

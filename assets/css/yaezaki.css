@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+/* commonの設定解除 */
+.wrapper {
+  margin: auto;
+}
+
+.ds_f {
+  flex-wrap: nowrap;
+  justify-content: baseline;
+}
+
+/* 全体 */
+#yaezaki {
+  margin-bottom: 30vh;
+}
+
+/* パンくず */
+.crumb {
+  position: fixed;
+  top: 100px;
+  left: 79px;
+  opacity: 0;
+  animation: anime ease-out .3s normal forwards;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.none {
+  opacity: 1;
+  animation: none_anime ease-out .3s normal forwards;
+}
+
+@keyframes none_anime {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.crumb li:nth-child(1) {
+  font-weight: bold;
+}
+
+.crumb ul:first-child>li:nth-child(2) {
+  margin-left: 22px;
+}
+
+.crumb .point {
+  font-weight: bold;
+  position: relative;
+}
+
+.crumb .point::before {
+  content: "→";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  color: #000;
+  left: -21px;
+}
+
+.crumb li ul li:hover:before {
+  content: "→";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  color: #000;
+  left: 0;
+  font-weight: 100;
+}
+.humberger .point{
+  font-weight: bold;
+  
+}
+
+/* タイトル */
+main h1 {
+  margin: 30vh auto 10vh;
+  font-size: 15vh;
+  line-height: 15vh;
+  text-shadow: -10px 0 0 #000;
+  padding-left: 5vw;
+}
+
+main h2 {
+  padding-left: 6vw;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+
+main h3 {
+  font-size: .9em;
+  padding-left: 4vw;
+}
+
+main h3 a {
+  padding: 1.5vh 1vw;
+  display: block;
+  width: 10vw;
+  margin: 4.5vh auto;
+  position: relative;
+  transition: .5s;
+}
+main h3 a:hover{
+  letter-spacing: 2px;
+  transition: .5s;
+  background-color: #FF9800;
+  color: #fff;
+}
+main h3 a:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  animation:border ease-out .3s normal forwards;
+}
+@keyframes border {
+  0%{
+    margin: -4vh;
+  }
+  50%{
+    margin: -1vh;
+  }
+  100%{
+    margin: 0;
+  }
+  
+}
+
+main h3 a:hover:after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  animation:border ease-out .3s normal forwards;
+}
+@keyframes border {
+  0%{
+    margin: -4vh;
+  }
+  50%{
+    margin: -1vh;
+  }
+  100%{
+    margin: 0;
+  }
+  
+}
+
+
+
+
+main h4 {
+  background-color: #214098;
+  height: 30px;
+  text-align: center;
+  line-height: 33px;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 3vh;
+}
+
+/* 画像エリア */
+main .image_area {
+  width: 68vw;
+}
+
+main .image_area figure {
+  width: 80%;
+}
+
+main .image_area figure:nth-child(1) img {
+  width: 100%;
+  border: 1px solid;
+  background-color: #ccc;
+}
+
+main .image_area figure:nth-child(2) img {
+  width: 50%;
+  margin-left: 10%;
+  border: 1px solid;
+}
+
+/* 文章エリア */
+main .commentary_area {
+  width: 50vw;
+
+}
+
+
+/* 文章エリア_共通 */
+.commentary_area dl {
+  margin-left: 1vw;
+  margin-right: 2vw;
+  margin-bottom: 5vh;
+}
+
+.commentary_area dd {
+  margin: auto;
+}
+
+/* 文章エリア_概要 */
+.commentary_area .summary p {
+  margin-left: 1vw;
+}
+
+.commentary_area .summary dt:nth-child(1) {
+  float: none;
+  font-weight: bold;
+}
+
+.commentary_area .summary dt {
+  float: left;
+  clear: both;
+}
+
+.commentary_area .summary dd::before {
+  content: "：";
+  margin-left: -17px;
+}
+
+.commentary_area .summary dd {
+  margin-left: 100px;
+  margin-bottom: 1vh;
+}
+
+/* 文章エリア_制作内訳 */
+
+.commentary_area .breakdown dt {
+  font-weight: bold;
+  margin-top: 1.5vh;
+}
+
+.commentary_area .breakdown dd {
+  margin-left: 15px;
+}
+
+.commentary_area .breakdown dt::before {
+  content: "【";
+}
+
+.commentary_area .breakdown dt::after {
+  content: "】";
+}
+
+.commentary_area .breakdown dl {
+  margin-left: .5vw;
+}
+
+/* 文章エリア_サイト設計 */
+.commentary_area .plan dt {
+  font-weight: bold;
+}
+
+.commentary_area .plan dt::before {
+  content: "・";
+}
+
+.commentary_area .plan dd {
+  margin-bottom: 2.5vh;
+}
