@@ -78,7 +78,7 @@ main .catch h2 .right {
 
 main .left {
   margin-right: 10%;
-  margin-top: 40%;
+  margin-top: 30%;
 }
 
 /* キャッチコピー */
@@ -587,7 +587,7 @@ footer .copyright {
 
   main .res_title p:nth-child(2) {
     color: #fff;
-    width: 1.8rem ;
+    width: 1.8rem;
     margin: auto;
     line-height: 2rem;
     font-size: 2.6rem;
@@ -595,13 +595,15 @@ footer .copyright {
 
   main .res_title p:nth-child(3) {
     color: #fff;
-    width:3rem;
+    width: 3rem;
     margin: auto;
     line-height: 2rem;
   }
-  main .res_title h1{
+
+  main .res_title h1 {
     margin-bottom: 10%;
   }
+
   .concept .text {
     height: 26%;
     font-size: 1rem;
@@ -723,12 +725,14 @@ footer .copyright {
   }
 
 
-  main .room p,main .spa p,main .meal p
-   {
+  main .room p,
+  main .spa p,
+  main .meal p {
     height: 45%;
     width: 295px;
+    margin: auto;
   }
-  
+
 
 
   .room_btn,
@@ -738,26 +742,21 @@ footer .copyright {
     z-index: 99999;
     position: absolute;
     top: 78%;
-    left: 26%;
-  }
-  main .room_btn p,
-  main .spa_btn p,
-  main .meal_btn p{
     width: 100%;
-  } 
+  }
 
   .room_btn a,
   .spa_btn a,
-  .meal_btn a{
+  .meal_btn a {
     display: block;
-    width: 100px;
+    width: 88px;
     border: 0.5px solid #999;
     border-radius: 50px;
     margin: 5% auto;
     text-align: center;
     color: #fff;
     background-color: #f22b0a;
-    padding: 5% 53%;
+    padding: 5% 30%;
   }
 
 }
